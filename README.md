@@ -65,3 +65,11 @@ situations.
 
 ## Next
 
+Some ideas for the future regarding Wheels:
+
+* CLI tools:
+    * To help streamline all building/running/reconfiguring/management of the
+      various containers
+    * Since Axle containers, by definition, are depended on by multiple wheels,
+      we need a way for check if they already are built at run time, and if not,
+      make it so.
