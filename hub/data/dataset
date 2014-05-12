@@ -1,0 +1,4 @@
+Var data as it pertains to your running process goes in here. A database for
+example could keep it's files in here, or, if your process is for analysing a
+data set, an Axle container would persist it, but it will become accessible
+in this folder.

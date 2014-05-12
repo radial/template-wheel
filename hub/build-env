@@ -1,0 +1,2 @@
+Build-time environment variables.
+Define your envs here if building the images.
