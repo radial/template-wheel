@@ -9,19 +9,22 @@ Some mandatory design features of a Wheel repository:
 
 ```
 .
-├── README.md
 ├── axle
 ├── hub
 │   ├── Dockerfile
 │   ├── build-env
 │   ├── config
-│   │   ├── cat.conf
+│   │   ├── echo.conf
 │   │   └── supervisor
 │   │       └── conf.d
-│   │           └── cat.ini
+│   │           └── echo.ini
 │   ├── data
-│   │   └── dataset
+│   │   ├── media
+│   │   │   └── dataset
+│   │   └── src
+│   │       └── echo.sh
 │   └── log
+│       └── logfile
 └── spoke
     └── Dockerfile
 ```
@@ -52,12 +55,12 @@ The folder structure of your 'config' branch would be as follows:
 
 ```
 .
-├── cat.conf
+├── echo.conf
 └── supervisor
     └── conf.d
-            └── cat.ini
+        └── echo.ini
 ```
-The two files 'cat.conf' and 'cat.ini' demonstrate the needs of a typical
+The two files 'echo.conf' and 'echo.ini' demonstrate the needs of a typical
 application, but this folder structure can easily support more complicated
 situations.
 

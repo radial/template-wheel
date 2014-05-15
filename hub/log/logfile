@@ -1,3 +1,6 @@
-You normally wouldn't need to add anything in this folder. Either the Hub or
-Axle container for this wheel will create it and your supervisor settings 
-should declare this directory as the storage for all your log files.
+This folder is not added by the 'radial/hub-base' image by default and shouldn't
+even exist in your typical Wheel repository. It is
+created dynamically by either your 'logs' axle container (which makes it's way
+into this hub via `--volumes-from logs` or is created fresh by the
+'radial/hub-base' and exposed via `VOLUME` there. The folder is only included
+here for completeness and to house this message.

@@ -1,0 +1,5 @@
+This folder can be used much the same was as /var. It stores data, source code,
+or anything else that pertains to your running process. A database for example
+could keep it's files in here, or, if your process is for analyzing a data set,
+an Axle container would persist it, but it will become accessible in this
+folder.
