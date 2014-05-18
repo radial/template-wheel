@@ -25,14 +25,14 @@ sudo docker run \
 
 # This runs a hub container that is built from Dockerfile, not built dynamically
 sudo docker run \
-    --name cat-hub \
+    --name echo-hub \
     --volumes-from logs \
     --detach \
-    i-cat-hub
+    i-echo-hub
 
 # run spoke container
 sudo docker run \
-    --name cat \
-    --volumes-from cat-hub \
+    --name echo \
+    --volumes-from echo-hub \
     --detach \
-    i-cat
+    i-echo

@@ -19,7 +19,7 @@ echo "" > hub/build-env
 
 
 # build hub.
-sudo docker build -t i-cat-hub hub
+sudo docker build -t i-echo-hub hub
 
 # build spoke
-sudo docker build -t i-cat spoke
+sudo docker build -t i-echo spoke
