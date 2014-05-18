@@ -10,7 +10,7 @@ MAINTAINER      {{Brian Clements <radial@brianclements.net>}}
 
 # Install packages
 ENV             DEBIAN_FRONTEND noninteractive
-RUN             apt-get -q update && apt-get -qyv install \
+RUN             apt-get -q update && apt-get -qyV install \
                     htop \
                     git &&\
                 apt-get clean
