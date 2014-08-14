@@ -10,7 +10,10 @@
 echo "" > hub/build-env 
 
 # for testing, we can add other values for the Wheel repository or use alternate 
-# Supervisor configurations by assigning the information in 'build-env'.
+# Supervisor configurations by assigning the information in 'build-env'. This
+# results in the configuration being added and commited in Dockers tracking
+# system statically before those volumes are shared.
+#
 # (examples of the method are shown here using the default locations for each).
 # echo "WHEEL_REPO=https://github.com/radial/template-wheel.git
 # WHEEL_BRANCH=config

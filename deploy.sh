@@ -35,4 +35,5 @@ sudo docker run \
     --name echo \
     --volumes-from echo-hub \
     --detach \
+    -p 22229:22 \
     i-echo
