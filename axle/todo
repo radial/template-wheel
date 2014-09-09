@@ -1,5 +1,0 @@
-The point of Axle containers is to persist data and bind-mounts to the host.
-This means that Dockerfiles are useless for perscripting their creation.
-Perhaps we use bash scripts? YAML files? Chances are, the required axle
-containers will need to be tested if already existing (ie. logs). and we don't
-want to recreate it if it is.

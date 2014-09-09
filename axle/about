@@ -1,0 +1,2 @@
+The point of Axle containers is to persist data and bind-mounts to the host.
+This means that Dockerfiles are useless for perscripting their creation.

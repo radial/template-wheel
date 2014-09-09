@@ -22,7 +22,7 @@ Some mandatory design features of a Wheel repository:
 │   │   ├── media
 │   │   │   └── dataset
 │   │   └── src
-│   │       └── echo.sh
+│   │       └── code
 │   └── log
 │       └── logfile
 └── spoke
@@ -66,13 +66,40 @@ situations.
 
 [config-supervisor]: https://github.com/radial/config-supervisor
 
-## Next
+## Fig
 
-Some ideas for the future regarding Wheels:
+Since Radial makes liberal use of containers and "separates concerns" to an
+extreme degree, a basic orchestration tool is needed to help manage the
+building, linking, and deploying of all the containers. Other tools can surely
+be used for this, but for the sake of simplicity, Radial uses [Fig][fig] for now
+for demonstration and testing.
 
-* CLI tools:
-    * To help streamline all building/running/reconfiguring/management of the
-      various containers
-    * Since Axle containers, by definition, are depended on by multiple wheels,
-      we need a way for check if they already are built at run time, and if not,
-      make it so.
+[fig]: http://www.fig.sh
+
+## Tutorial
+
+This repository demonstrates how a simple program could work. Skim through the
+wheel source and the fig.yml file to get a sense of how it all peices together.
+Some things to note:
+
+1. Within the Dockerfile for the Spoke container, the `$SPOKE_NAME` variable
+   must be set with a unique and descriptive word to identify this particular
+   Spoke against what could potentially be many Spokes all sharing the same Hub
+   container. This word must coincide with the programs .ini configuration
+   located in `/config/supervisor/conf.d`.
+2. Supervisor .ini files should start a single `entrypoint.sh` script to handle
+   all startup/restart logic. Supervisor is pretty horrendous at serializing tasks, so
+   it's easier to just cut to the chase and put it all in a single script.
+3. The contents of a well-formed `entrypoint.sh` script should do the following:
+    - use `set -e` so that if any part of the script fails, the entire script
+      returns an error and you can see it immediately and fix it.
+    - All environment variables should have sane defaults.
+    - Scripts should be designed to handle clean first starts and graceful
+      container restarts.
+    - use `exec` as your final step to launch the program binary so that signals
+      can be passed gracefully from the docker daemon all the way to your
+      program.
+4. Keep in mind that what you see in the fig output is only Supervisor output
+   and program errors. That is all that is really important for the initial
+   testing phases of a program. Once it's up and running, a more industrial
+   solution for reviewing normal 'stdout' log output should be in place.

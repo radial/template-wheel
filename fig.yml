@@ -1,0 +1,20 @@
+logs:
+    image: "radial/axle-base:latest"
+    volumes:
+        - /log
+hub:
+    build: hub
+    volumes_from:
+        - logs
+    volumes:
+        - /config
+        - /data
+        - /run
+echo:
+    build: spoke
+    volumes_from:
+        - hub
+    ports:
+        - "22229:22"
+    environment:
+        SLEEP_DUR: 20

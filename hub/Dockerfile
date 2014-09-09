@@ -24,9 +24,10 @@ ADD             /log /log
 # If you wanted to cURL or git a dataset or other types of data from a remote
 # location, you must add an ENTRYPOINT to the end of this file here with
 # instructions to download/extract it. Be mindful though that the ONBUILD
-# ENTRYPOINT that normally executes here (set in the radial/hub-base image) does
-# many things.  You could potentially clone it's instructions here with your
-# modifications, but be mindful when overwriting it that you don't break it.
-# More predictably, you should create a supervisor subprocess in
+# ENTRYPOINT that normally executes here (set in the radial/hub-base image)
+# does many things.  You could potentially clone it's instructions here with
+# your modifications, but be mindful when overwriting it that you don't break
+# it.  More predictably, you should create a supervisor subprocess in
 # '/config/supervisor/conf.d' that runs a command or script to extract this
-# data.
+# data or add it as part of a Spoke container's entrypoint.sh script upon
+# startup.
