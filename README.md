@@ -14,10 +14,10 @@ Some mandatory design features of a Wheel repository:
 │   ├── Dockerfile
 │   ├── build-env
 │   ├── config
-│   │   ├── echo.conf
+│   │   ├── echos.conf
 │   │   └── supervisor
 │   │       └── conf.d
-│   │           └── echo.ini
+│   │           └── echos.ini
 │   ├── data
 │   │   ├── media
 │   │   │   └── dataset
@@ -55,12 +55,12 @@ The folder structure of your 'config' branch would be as follows:
 
 ```
 .
-├── echo.conf
+├── echos.conf
 └── supervisor
     └── conf.d
-        └── echo.ini
+        └── echos.ini
 ```
-The two files 'echo.conf' and 'echo.ini' demonstrate the needs of a typical
+The two files 'echos.conf' and 'echos.ini' demonstrate the needs of a typical
 application, but this folder structure can easily support more complicated
 situations.
 
