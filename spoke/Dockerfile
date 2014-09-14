@@ -5,7 +5,7 @@
 # Trusty), then this trully is all you would need; just install the package. All
 # application configuration as well as your application's .ini file is
 # added/cloned/managed by the Hub container.
-FROM            radial/spoke-base
+FROM            radial/spoke-base:latest
 MAINTAINER      Brian Clements <radial@brianclements.net>
 
 # Install packages

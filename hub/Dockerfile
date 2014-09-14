@@ -1,4 +1,4 @@
-FROM            radial/hub-base
+FROM            radial/hub-base:latest
 MAINTAINER      radial@brianclements.net
 
 # The "radial/hub-base" image copies the entire context by default. Make sure to
