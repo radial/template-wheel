@@ -1,6 +1,6 @@
-/data is a type of hybrid between /var, /home, and /opt. It stores temporary
-and/or permanent items or anything else that pertains to your Spoke's needs.
+# /data is a type of hybrid between /var, /home, and /opt. It stores temporary
+# and/or permanent items or anything else that pertains to your Spoke's needs.
 
-A database for example could keep it's files in here in it's own directory, or,
-if your process is for analyzing a data set, an Axle container would persist
-it, but it will become accessible in this folder.
+# A database for example could keep it's files in here in it's own directory, or,
+# if your process is for analyzing a data set, an Axle container would persist
+# it, but it will become accessible in this folder.

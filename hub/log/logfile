@@ -1,6 +1,6 @@
-This folder is not added by the 'radial/hub-base' image by default and shouldn't
-even exist in your typical Wheel repository. It is
-created dynamically by either your 'logs' axle container (which makes it's way
-into this hub via `--volumes-from logs` or is created fresh by the
-'radial/hub-base' and exposed via `VOLUME` there. The folder is only included
-here for completeness and to house this message.
+# This folder is not added by the 'radial/hub-base' image by default and shouldn't
+# even exist in your typical Wheel repository. It is
+# created dynamically by either your 'logs' axle container (which makes it's way
+# into this hub via `--volumes-from logs` or is created fresh by the
+# 'radial/hub-base' and exposed via `VOLUME` there. The folder is only included
+# here for completeness and to house this message.

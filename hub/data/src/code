@@ -1,10 +1,10 @@
-/data is a type of hybrid between /var, /home, and /opt. It stores temporary
-and/or permanent items or anything else that pertains to your Spoke's needs.
+# /data is a type of hybrid between /var, /home, and /opt. It stores temporary
+# and/or permanent items or anything else that pertains to your Spoke's needs.
 
-Source code could potentially be stored in here as well, but make sure you know
-how you'd like to use that data. Does one temporary Spoke container manage the
-downloading/configuring/compiling of the source code into a binary that a
-another Spoke container finally runs? This situation would warrant the use of a
-/data/src folder. If you have very slow release cycles in your source, you
-might be better off keeping your Hub container small and just doing all that
-work in the main application's Spoke container.
+# Source code could potentially be stored in here as well, but make sure you know
+# how you'd like to use that data. Does one temporary Spoke container manage the
+# downloading/configuring/compiling of the source code into a binary that a
+# another Spoke container finally runs? This situation would warrant the use of a
+# /data/src folder. If you have very slow release cycles in your source, you
+# might be better off keeping your Hub container small and just doing all that
+# work in the main application's Spoke container.
