@@ -11,7 +11,7 @@ restart_message() {
 }
 
 normal_start() {
-    exec /opt/echo.sh $SLEEP_DUR
+    exec /opt/echos.sh $SLEEP_DUR
 }
 
 if [ ! -e /tmp/echo_first_run ]; then

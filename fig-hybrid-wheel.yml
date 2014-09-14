@@ -10,7 +10,7 @@ hub:
         - /config
         - /data
         - /run
-echo:
+echos:
     build: spoke
     volumes_from:
         - hub
