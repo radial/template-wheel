@@ -30,10 +30,10 @@ ENV             GH_USER brianclements
 # programs are specifically set to not autostart. As a result, setting this
 # variable will be a unique identifier used by Supervisor to start this Spokes
 # program and not any of the others. 
-ENV             SPOKE_NAME echo
+ENV             SPOKE_NAME echos
 
 COPY            /entrypoint.sh /entrypoint.sh
-COPY            /echo.sh /opt/echo.sh
+COPY            /echos.sh /opt/echos.sh
 # Notice that there is no CMD or ENTRYPOINT. This is because a default
 # ENTRYPOINT is already declared in the 'radial/spoke-base' image. It does many
 # things that make this container work predictably, so take care when replacing
