@@ -1,0 +1,30 @@
+logs:
+    image: "radial/axle-base:latest"
+    volumes:
+        - /log
+hub:
+    image: "radial/hub-base:latest"
+    volumes_from:
+        - logs
+    volumes:
+        - /config
+        - /data
+        - /run
+    environment:
+        WHEEL_REPO_ECHOS_TEST: "https://github.com/radial/template-wheel.git"
+        WHEEL_REPO_CLARITY: "https://github.com/radial/wheel-clarity.git"
+echos:
+    image: "brianclements/echos-test:latest"
+    volumes_from:
+        - hub
+    ports:
+        - "22229:22"
+    environment:
+        SLEEP_DUR: 2
+clarity:
+    image: "radial/clarity:latest"
+    volumes_from:
+        - hub
+    ports:
+        - "8989:80"
+        - "22232:22"
