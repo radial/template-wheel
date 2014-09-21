@@ -14,7 +14,5 @@ echos:
     build: spoke
     volumes_from:
         - hub
-    ports:
-        - "22229:22"
     environment:
         SLEEP_DUR: 20

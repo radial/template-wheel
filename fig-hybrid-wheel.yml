@@ -14,8 +14,6 @@ echos:
     build: spoke
     volumes_from:
         - hub
-    ports:
-        - "22229:22"
     environment:
         SLEEP_DUR: 2
 logio:
@@ -25,4 +23,3 @@ logio:
     ports:
         - "28777:28777"
         - "28778:28778"
-        - "22233:22"
