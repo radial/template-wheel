@@ -13,7 +13,6 @@ ENV             DEBIAN_FRONTEND noninteractive
 RUN             apt-get -q update && apt-get -qyV install \
                     htop &&\
                 apt-get clean
-RUN             env --unset=DEBIAN_FRONTEND
 
 # GH_USER needs to be specified if you have a Github account and want your
 # public keys automatically imported into your container for easy SSH support.
